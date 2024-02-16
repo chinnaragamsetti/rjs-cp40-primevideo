@@ -8,8 +8,13 @@ import MovieItem from '../MovieItem'
 
 const MoviesSlider = props => {
   const {filteredList} = props
+  const settings = {
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  }
   return (
-    <Slider>
+    <Slider {...settings}>
       {filteredList.map(each => (
         <MovieItem eachDetails={each} />
       ))}

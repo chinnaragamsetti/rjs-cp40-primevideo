@@ -21,7 +21,7 @@ class MovieItem extends Component {
   render() {
     const {isPlaying} = this.state
     const {thumbnailUrl, videoURL, categoryId} = this.props
-    // const btnText = isPlaying ? 'Pause' : 'Play'
+    const btnText = isPlaying ? 'Pause' : 'Play'
 
     return (
       <>
@@ -30,7 +30,25 @@ class MovieItem extends Component {
           trigger={<img src={thumbnailUrl} alt={categoryId} className="item" />}
           overlayStyle={overlayStyles}
         >
-          <ReactPlayer url={videoURL} playing={isPlaying} />
+          {close => (
+            <>
+              <ReactPlayer url={videoURL} playing={isPlaying} />
+              <button
+                type="button"
+                className="trigger-button"
+                onClick={() => close()}
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                className="button"
+                onClick={this.onClickPlay}
+              >
+                {btnText}
+              </button>
+            </>
+          )}
         </Popup>
       </>
     )
