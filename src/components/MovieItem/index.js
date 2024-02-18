@@ -20,7 +20,8 @@ class MovieItem extends Component {
 
   render() {
     const {isPlaying} = this.state
-    const {thumbnailUrl, videoURL, categoryId} = this.props
+    const {eachDetails} = this.props
+    const {thumbnailUrl, videoURL, categoryId} = eachDetails
     const btnText = isPlaying ? 'Pause' : 'Play'
 
     return (

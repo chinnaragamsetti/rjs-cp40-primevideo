@@ -10,7 +10,7 @@ const MoviesSlider = props => {
   const {filteredList} = props
   const settings = {
     dots: true,
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
   }
   return (

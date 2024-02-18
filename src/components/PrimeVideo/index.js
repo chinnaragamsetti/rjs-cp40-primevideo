@@ -5,8 +5,8 @@ import './index.css'
 
 const PrimeVideo = props => {
   const {moviesList} = props
-  const actionList = moviesList.map(each => each.categoryId === 'ACTION')
-  const comedyList = moviesList.map(each => each.categoryId === 'COMEDY')
+  const actionList = moviesList.filter(each => each.categoryId === 'ACTION')
+  const comedyList = moviesList.filter(each => each.categoryId === 'COMEDY')
   return (
     <div className="maincontainer">
       <img
