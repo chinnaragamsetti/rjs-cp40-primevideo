@@ -5,10 +5,6 @@ import ReactPlayer from 'react-player'
 
 import './index.css'
 
-const overlayStyles = {
-  backgroundColor: '#ffff',
-}
-
 class MovieItem extends Component {
   state = {
     isPlaying: false,
@@ -29,16 +25,11 @@ class MovieItem extends Component {
         <Popup
           modal
           trigger={<img src={thumbnailUrl} alt={categoryId} className="item" />}
-          overlayStyle={overlayStyles}
         >
           {close => (
-            <>
+            <div className="popupvideocontainer">
               <ReactPlayer url={videoURL} playing={isPlaying} />
-              <button
-                type="button"
-                className="trigger-button"
-                onClick={() => close()}
-              >
+              <button type="button" className="button" onClick={() => close()}>
                 Close
               </button>
               <button
@@ -48,7 +39,7 @@ class MovieItem extends Component {
               >
                 {btnText}
               </button>
-            </>
+            </div>
           )}
         </Popup>
       </>

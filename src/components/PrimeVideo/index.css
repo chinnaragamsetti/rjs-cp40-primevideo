@@ -10,26 +10,21 @@
   height: 30%;
 }
 .bottomcont {
-  height: 70%;
-  border: 1px solid red;
+  height: 100%;
+  padding: 30px;
+
   background-color: black;
 }
 .action {
-  font-size: 10px;
+  font-size: 30px;
   color: #ffffff;
+  font-weight: bold;
 }
 .comedy {
-  font-size: 10px;
+  font-size: 30px;
   color: #ffffff;
+  font-weight: bold;
 }
-.actioncont {
-  height: 27%;
-}
-.comedycont {
-  height: 27%;
-}
-
 .slider {
-  width: 100%;
-  height: 25%;
+  height: 30%;
 }
