@@ -17,7 +17,7 @@ class MovieItem extends Component {
   render() {
     const {isPlaying} = this.state
     const {eachDetails} = this.props
-    const {thumbnailUrl, videoURL, categoryId} = eachDetails
+    const {thumbnailUrl, videoUrl, categoryId} = eachDetails
     const btnText = isPlaying ? 'Pause' : 'Play'
 
     return (
@@ -28,7 +28,7 @@ class MovieItem extends Component {
         >
           {close => (
             <div className="popupvideocontainer">
-              <ReactPlayer url={videoURL} playing={isPlaying} />
+              <ReactPlayer url={videoUrl} playing={isPlaying} />
               <button type="button" className="button" onClick={() => close()}>
                 Close
               </button>
