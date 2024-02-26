@@ -11,15 +11,15 @@ const PrimeVideo = props => {
     <div className="maincontainer">
       <img
         src="https://assets.ccbp.in/frontend/react-js/prime-video-img.png"
-        alt="prime vedio"
+        alt="prime video"
         className="logo"
       />
       <div className="bottomcont">
-        <p className="action">Action Movies</p>
+        <h1 className="action">Action Movies</h1>
         <div className="slider">
           <MovieSlider filteredList={actionList} />
         </div>
-        <p className="comedy">Comedy Movies</p>
+        <h1 className="comedy">Comedy Movies</h1>
         <div className="slider">
           <MovieSlider filteredList={comedyList} />
         </div>

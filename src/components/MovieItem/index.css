@@ -4,5 +4,20 @@
   height: 100%;
 }
 .popupvideocontainer {
-  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.crossmark {
+  align-self: flex-end;
+  margin-right: 13px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.videocontainer {
+  margin: 30px;
+  margin-top: 0px;
 }
